@@ -7,4 +7,15 @@ echo '<h1>Cookies</h1>';
   You can set specific data to be stored in the browser, and then retrieve it when the user visits the site again.
 */
 
+//Set a cookie
+setcookie('name', 'Ryan', time() + 86400 * 30);
+
+//Get cookie and then use it
+if (isset($_COOKIE['name'])) {
+  echo $_COOKIE['name'];
+}
+
+//Delete the cookie
+setcookie('name', '', time() - 86400);
+
 ?>
